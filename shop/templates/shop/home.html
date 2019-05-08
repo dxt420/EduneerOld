@@ -1,65 +1,535 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
 
-{% extends "shop/base2.html" %}
-{% block contentx %}
- <!-- Main section -->
- <div class="section">
-    <!-- Container -->
-    <div class="container">
 
-        <!-- House products -->
-        <div class="columns category-header">
-            <div class="column is-10 is-offset-1 is-tablet-landscape-padded">
-                <!-- Title -->
-                <div class="category-title is-product-category">
-                    <h2>Categories </h2>
-                   <p></p>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *Must* come first in the head; any other head content must come *after* these tags -->
 
-                <!-- Controls -->
-                <div class="listing-controls">
-                    <div class="layout-controls">
-                       
+    <!-- Title -->
+    <title>Eduneer | Home</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'shop/assets/img/core-img/favicon.png' %}">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'shop/assets/style.css' %}">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header-area d-flex justify-content-between align-items-center">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <a href="#"><span>Phone:</span> +20 XXXXXXXXXXX</a>
+                <a href="#"><span>Email:</span> <span class="__cf_email__">info@eduneer.com</span></a>
+            </div>
+            <!-- Follow Us -->
+            <div class="follow-us">
+                <span>Follow us</span>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <!-- Navbar Area -->
+        <div class="clever-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Menu -->
+                <nav class="classy-navbar justify-content-between" id="cleverNav">
+
+                    <!-- Logo -->
+                    <a class="nav-brand" href=""><img src="{% static 'shop/assets/img/core-img/logo.png' %}" alt=""></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
                     </div>
-                    <!-- Sort -->
-                   
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+
+                        <!-- Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                <li><a href="">Home</a></li>
+                                <li><a href="#">Courses</a></li>
+                                <li><a href="#">Talks</a></li>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Partners</a></li>
+                            </ul>
+
+                            <!-- Search Button -->
+                            <div class="search-area">
+                                <form action="#" method="post">
+                                    <input type="search" name="search" id="search" placeholder="Search">
+                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+
+                            <!-- Register / Login -->
+                            <div class="register-login-area">
+                                <a href="#" class="btn">Register</a>
+                                <a href="#" class="btn active">Login</a>
+                            </div>
+
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Hero Area Start ##### -->
+    <section class="hero-area bg-img bg-overlay-2by5"
+        style="background-image: url('{% static 'shop/assets/img/bg-img/bg1.jpg' %}');">
+
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <!-- Hero Content -->
+                    <div class="hero-content text-center">
+                        <h2>Let's Study Together</h2>
+                        <a href="#" class="btn clever-btn">Get Started</a>
+                    </div>
                 </div>
-                <!-- /Controls -->
+            </div>
+        </div>
+    </section>
+    <!-- ##### Hero Area End ##### -->
 
-                <!-- Product grid -->
-                <div class="columns is-product-grid is-multiline">
-                    <!-- Product -->
+    <!-- ##### Cool Facts Area Start ##### -->
+    <section class="cool-facts-area section-padding-100-0">
+        <div class="container">
+            <div class="row">
+                <!-- Single Cool Facts Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-cool-facts-area text-center mb-100 wow fadeInUp" data-wow-delay="250ms">
+                        <div class="icon">
+                            <img src="{% static 'shop/assets/img/core-img/docs.png' %}" alt="">
+                        </div>
+                        <h2><span class="counter">1</span></h2>
+                        <h5>Success Stories</h5>
+                    </div>
+                </div>
 
-                     {% for c in categories.each %}
-                    <div class="column is-3">
-                        <div class="flat-card">
-                            <!-- Product zoomable image -->
-                            <div class="image">
-                                <img src="/static/shop/assets/images/products/red-seat.png" alt="">
+                <!-- Single Cool Facts Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-cool-facts-area text-center mb-100 wow fadeInUp" data-wow-delay="500ms">
+                        <div class="icon">
+                            <img src="{% static 'shop/assets/img/core-img/star.png' %}" alt="">
+                        </div>
+                        <h2><span class="counter">5</span></h2>
+                        <h5>Dedicated Tutors</h5>
+                    </div>
+                </div>
+
+                <!-- Single Cool Facts Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-cool-facts-area text-center mb-100 wow fadeInUp" data-wow-delay="750ms">
+                        <div class="icon">
+                            <img src="{% static 'shop/assets/img/core-img/events.png' %}" alt="">
+                        </div>
+                        <h2><span class="counter">3</span></h2>
+                        <h5>Scheduled Events</h5>
+                    </div>
+                </div>
+
+                <!-- Single Cool Facts Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-cool-facts-area text-center mb-100 wow fadeInUp" data-wow-delay="1000ms">
+                        <div class="icon">
+                            <img src="{% static 'shop/assets/img/core-img/earth.png' %}" alt="">
+                        </div>
+                        <h2><span class="counter">56</span></h2>
+                        <h5>Available Courses</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Cool Facts Area End ##### -->
+
+
+
+    <!-- ##### Best Tutors Start ##### -->
+    <section class="best-tutors-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h3>Courses</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="tutors-slide owl-carousel wow fadeInUp" data-wow-delay="250ms">
+
+                        <!-- Single Tutors Slide -->
+                        <div class="single-tutors-slides">
+                            <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="250ms">
+                                <img src="{% static 'shop/assets/img/bg-img/c1.jpg' %}" alt="">
+                                <!-- Course Content -->
+                                <div class="course-content">
+                                    <h4>English Grammar</h4>
+                                    <div class="meta d-flex align-items-center">
+                                        <a href="#">Sarah Parker</a>
+                                        <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                        <a href="#">Mechanics</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis
+                                        eu
+                                        metus in, sagittis</p>
+                                </div>
+                                <!-- Seat Rating Fee -->
+                                <div class="seat-rating-fee d-flex justify-content-between">
+                                    <div class="seat-rating h-100 d-flex align-items-center">
+                                        <div class="seat">
+                                            <i class="fa fa-user" aria-hidden="true"></i> 10
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa fa-star" aria-hidden="true"></i> 4.5
+                                        </div>
+                                    </div>
+                                    <div class="course-fee h-100">
+                                        <a href="#" class="free">Free</a>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- Product meta -->
-                            <div class="product-info has-text-centered">
-                                <a href="{% url 'shop:products' c.key %}"><h3 class="product-name">{{c.val.name}}</h3></a>
-                                <p class="product-description">{{c.val.description}}</p>
-                               
+                        </div>
+
+                        <!-- Single Tutors Slide -->
+                        <div class="single-tutors-slides">
+                            <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="500ms">
+                                <img src="{% static 'shop/assets/img/bg-img/c2.jpg' %}" alt="">
+                                <!-- Course Content -->
+                                <div class="course-content">
+                                    <h4>Vocabulary</h4>
+                                    <div class="meta d-flex align-items-center">
+                                        <a href="#">Mahmoud Khirallah</a>
+                                        <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                        <a href="#">Electrical &amp; Magnetics</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis
+                                        eu
+                                        metus in, sagittis</p>
+                                </div>
+                                <!-- Seat Rating Fee -->
+                                <div class="seat-rating-fee d-flex justify-content-between">
+                                    <div class="seat-rating h-100 d-flex align-items-center">
+                                        <div class="seat">
+                                            <i class="fa fa-user" aria-hidden="true"></i> 10
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa fa-star" aria-hidden="true"></i> 4.5
+                                        </div>
+                                    </div>
+                                    <div class="course-fee h-100">
+                                        <a href="#">$20</a>
+                                    </div>
+                                </div>
                             </div>
-                            
+                        </div>
+
+                        <!-- Single Tutors Slide -->
+                        <div class="single-tutors-slides">
+                            <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="750ms">
+                                <img src="{% static 'shop/assets/img/bg-img/c3.jpg' %}" alt="">
+                                <!-- Course Content -->
+                                <div class="course-content">
+                                    <h4>Expository writing</h4>
+                                    <div class="meta d-flex align-items-center">
+                                        <a href="#">Albert Einstein</a>
+                                        <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                        <a href="#">Astrology</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis
+                                        eu
+                                        metus in, sagittis</p>
+                                </div>
+                                <!-- Seat Rating Fee -->
+                                <div class="seat-rating-fee d-flex justify-content-between">
+                                    <div class="seat-rating h-100 d-flex align-items-center">
+                                        <div class="seat">
+                                            <i class="fa fa-user" aria-hidden="true"></i> 10
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa fa-star" aria-hidden="true"></i> 4.5
+                                        </div>
+                                    </div>
+                                    <div class="course-fee h-100">
+                                        <a href="#">$45</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Best Tutors End ##### -->
+
+    
+
+        <!-- ##### Best Tutors Start ##### -->
+    <section class="best-tutors-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h3>Talks</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="tutors-slide owl-carousel wow fadeInUp" data-wow-delay="250ms">
+
+                        <!-- Single Tutors Slide -->
+                        <div class="single-tutors-slides">
+                             <div class="single-upcoming-events mb-50 wow fadeInUp" data-wow-delay="250ms">
+                        <!-- Events Thumb -->
+                        <div class="events-thumb">
+                            <img src="{% static 'shop/assets/img/bg-img/e1.jpg' %}" alt="">
+                            <h6 class="event-date">August 26</h6>
+                            <h4 class="event-title">Networking Day</h4>
+                        </div>
+                        <!-- Date & Fee -->
+                        <div class="date-fee d-flex justify-content-between">
+                            <div class="date">
+                                <p><i class="fa fa-clock"></i> Networking Day</p>
+                            </div>
+                            <div class="events-fee">
+                                <a href="#">$45</a>
+                            </div>
                         </div>
                     </div>
-                     {% endfor %} 
-               
+                        </div>
+
+                        <!-- Single Tutors Slide -->
+                        <div class="single-tutors-slides">
+                            <div class="single-upcoming-events mb-50 wow fadeInUp" data-wow-delay="500ms">
+                        <!-- Events Thumb -->
+                        <div class="events-thumb">
+                            <img src="{% static 'shop/assets/img/bg-img/e2.jpg' %}" alt="">
+                            <h6 class="event-date">August 7</h6>
+                            <h4 class="event-title">Open Doors Day</h4>
+                        </div>
+                        <!-- Date & Fee -->
+                        <div class="date-fee d-flex justify-content-between">
+                            <div class="date">
+                                <p><i class="fa fa-clock"></i> Open Doors Day</p>
+                            </div>
+                            <div class="events-fee">
+                                <a href="#" class="free">Free</a>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+
+                        <!-- Single Tutors Slide -->
+                        <div class="single-tutors-slides">
+                            <div class="single-upcoming-events mb-50 wow fadeInUp" data-wow-delay="750ms">
+                        <!-- Events Thumb -->
+                        <div class="events-thumb">
+                            <img src="{% static 'shop/assets/img/bg-img/e3.jpg' %}" alt="">
+                            <h6 class="event-date">August 3</h6>
+                            <h4 class="event-title">Creative Leadership</h4>
+                        </div>
+                        <!-- Date & Fee -->
+                        <div class="date-fee d-flex justify-content-between">
+                            <div class="date">
+                                <p><i class="fa fa-clock"></i> Creative Leadership</p>
+                            </div>
+                            <div class="events-fee">
+                                <a href="#">$45</a>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+
+
+
+                    </div>
                 </div>
-                <!-- /Product grid -->
-
-
             </div>
-        </div> 
-        <!-- /House products -->
+        </div>
+    </section>
+    <!-- ##### Best Tutors End ##### -->
 
-    </div>
-    <!-- /Container -->
-</div>
-<!-- /Main section -->
+  
 
 
-{% endblock contentx %}
+
+
+
+  <!-- ##### Best Tutors Start ##### -->
+    <section class="best-tutors-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h3>News</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="tutors-slide owl-carousel wow fadeInUp" data-wow-delay="250ms">
+
+                        <!-- Single Tutors Slide -->
+                        <div class="single-tutors-slides">
+                             <div class="single-blog-area mb-100 wow fadeInUp" data-wow-delay="250ms">
+                        <img src="{% static 'shop/assets/img/blog-img/1.jpg' %}" alt="">
+                        <!-- Blog Content -->
+                        <div class="blog-content">
+                            <a href="#" class="blog-headline">
+                                <h4>Engineering In Advance</h4>
+                            </a>
+                            <div class="meta d-flex align-items-center">
+                                <a href="#">Sarah Parker</a>
+                                <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                <a href="#">Science</a>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu
+                                metus in, sagittis</p>
+                        </div>
+                    </div>
+                        </div>
+
+                        <!-- Single Tutors Slide -->
+                        <div class="single-tutors-slides">
+                           <div class="single-blog-area mb-100 wow fadeInUp" data-wow-delay="500ms">
+                        <img src="{% static 'shop/assets/img/blog-img/2.jpg' %}" alt="">
+                        <!-- Blog Content -->
+                        <div class="blog-content">
+                            <a href="#" class="blog-headline">
+                                <h4>Breakout of the year</h4>
+                            </a>
+                            <div class="meta d-flex align-items-center">
+                                <a href="#">Ali K Majid</a>
+                                <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                <a href="#">Innovations</a>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu
+                                metus in, sagittis</p>
+                        </div>
+                    </div>
+                        </div>
+
+                        
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Best Tutors End ##### -->
+
+   
+
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <!-- Top Footer Area -->
+        <div class="top-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Footer Logo -->
+                        <div class="footer-logo">
+                            <a href=""><img src="{% static 'shop/assets/img/core-img/logo2.png' %}" alt=""></a>
+                        </div>
+                        <!-- Copywrite -->
+                        <p><a href="#">
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;<script data-cfasync="false"
+                                    src="https://colorlib.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+                                </script>
+                                <script type="5fda1e25b9935141b7abb5cb-text/javascript">
+                                    document.write(new Date().getFullYear());
+                                </script> All rights reserved | <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script data-cfasync="false"
+        src="https://colorlib.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="{% static 'shop/assets/js/jquery/jquery-2.2.4.min.js' %}"
+        type="5fda1e25b9935141b7abb5cb-text/javascript"></script>
+    <!-- Popper js -->
+    <script src="{% static 'shop/assets/js/bootstrap/popper.min.js' %}" type="5fda1e25b9935141b7abb5cb-text/javascript">
+    </script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'shop/assets/js/bootstrap/bootstrap.min.js' %}"
+        type="5fda1e25b9935141b7abb5cb-text/javascript"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'shop/assets/js/plugins/plugins.js' %}" type="5fda1e25b9935141b7abb5cb-text/javascript">
+    </script>
+    <!-- Active js -->
+    <script src="{% static 'shop/assets/js/active.js' %}" type="5fda1e25b9935141b7abb5cb-text/javascript"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
+        type="5fda1e25b9935141b7abb5cb-text/javascript"></script>
+    <script type="5fda1e25b9935141b7abb5cb-text/javascript">
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+
+
+    <script src="{% static 'shop/assets/rocket-loader.min.js' %}" data-cf-settings="5fda1e25b9935141b7abb5cb-|49"
+        defer=""></script>
+</body>
+
+
+
+</html>

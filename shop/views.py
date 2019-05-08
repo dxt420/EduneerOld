@@ -17,20 +17,30 @@ from django.conf import settings
 import re
 
 
+from ravepay.signals import payment_verified
+
+from django.dispatch import receiver
+
+
+
+
 config = {
-    'apiKey': "AIzaSyA-W5UF_rvGjzUuSxPwNOQb0wO8q0cDl5A",
-    'authDomain': "muja-mall.firebaseapp.com",
-    'databaseURL':  "https://muja-mall.firebaseio.com",
-    'projectId': "muja-mall",
-    'storageBucket': "muja-mall.appspot.com",
-    'messagingSenderId': "424974719406"
-
-
+    'apiKey': "AIzaSyAd8pc4st2fpBSt92GxeW9iF4Uql3j6LXI",
+    'authDomain': "eduneer-82d2e.firebaseapp.com",
+    'databaseURL':  "https://eduneer-82d2e.firebaseio.com",
+    'projectId': "eduneer-82d2e",
+    'storageBucket': "eduneer-82d2e.appspot.com",
+    'messagingSenderId': "279848792993",
+    'appId' : "1:279848792993:web:4d156db97784ae7b"
+ 
 }
 firebase = pyrebase.initialize_app(config)
 auth = firebase.auth()
 db = firebase.database()
 
+
+# PPPPPPPPPPAAAAAAAAAAAAASSSSSSSSSSSSSWWWWWWWWWWWWWWWWWOOOOOOOOOOOOORRRRRRRRRRRRDDDDDDDDDDDDDDD
+# eduneeradmin143
 
 
 
@@ -43,6 +53,18 @@ db = firebase.database()
 # user = firebase.auth().currentUser
 
 # user = request.session.get('user')
+
+
+@receiver(payment_verified)
+def on_payment_verified(sender, ref,amount, **kwargs):
+    """
+    ref: paystack reference sent back.
+    amount: amount in Naira or the currency passed
+    """
+    pass
+
+
+    
 
 def postsign(request):
     email=request.POST.get('email')
@@ -119,18 +141,6 @@ def postsignup(request):
 
 
 def home(request):
-    # if request.session.get('user'):
-    #     categories = db.child("categories").get()
-    #     context = {
-    #         "categories":categories,
-    #         "aa":"is-active",
-    #     }
-    #     # num = request.session.get('num')
-    #     print(request.session.get('user'))
-    #     return render(request,"shop/home.html",context)
-    # else:
-    #     print(request.session.get('user'))
-    #     return render(request, "shop/login.html")
     cart = Cart(request)
 
     categories = db.child("categories").get()
@@ -414,7 +424,10 @@ def checkout3(request):
     return render(request, 'shop/checkout-step-3.html',context)
 
 def checkout4(request):
+
+
     return render(request, 'shop/checkout-step-4.html')
+    # return render(request, 'shop/checkout-step-5.html')
     
 
 def checkoutx(request):
