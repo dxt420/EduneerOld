@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "shop","cart","ravepay"
+    "shop","cart","ravepay","social_django"
 ]
 
 MIDDLEWARE = [
@@ -38,6 +38,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'project.urls'
@@ -54,10 +55,22 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'shop.context_processors.cart',
+                'social_django.context_processors.backends',  # <--
+                'social_django.context_processors.login_redirect', # <--
             ],
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = (
+   
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.open_id.OpenIdAuth',  # for Google authentication
+ 'social_core.backends.google.GoogleOpenId',  # for Google authentication
+ 'social_core.backends.google.GoogleOAuth2',
+
+    'django.contrib.auth.backends.ModelBackend',
+)
 
 WSGI_APPLICATION = 'project.wsgi.application'
 
@@ -113,6 +126,7 @@ STATIC_URL = '/static/'
 
 
 LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
 
 LOGIN_REDIRECT_URL = 'shop:home'
 
@@ -124,6 +138,28 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 CART_SESSION_ID = 'cart'
+
+SOCIAL_AUTH_FACEBOOK_KEY = '432615494188372'  # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '4a42602a51da5fb2da39ecd439320afc'
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {       
+    'fields': 'id, name, email, picture.type(large), link'
+}
+SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [                 
+    ('name', 'name'),
+    ('email', 'email'),
+    ('picture', 'picture'),
+    ('link', 'profile_url'),
+] 
+SOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_DATA = [                 
+    ('name', 'name'),
+    ('email', 'email'),
+    ('picture', 'picture'),
+    ('link', 'profile_url'),
+] 
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = "279848792993-fj9d7knbqajhpllk43oq2v8echl1kqfn.apps.googleusercontent.com" #Paste CLient Key
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = "T23-quh17QGO0JHXhhbE3uAL" #Paste Secret Key
 
 
 

@@ -1,0 +1,163 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+
+{% block title %}
+Talks
+{% endblock %}
+
+{% block logo %} 
+<div id="logo-box" class="bg-primary mdk-box js-mdk-box mb-0" style="height: 292px;"
+data-effects="parallax-background blend-background">
+<div class="mdk-box__bg">
+    <div class="mdk-box__bg-front"
+        style="background-image: url(/static/shop/assets/images/eduneer_talks.png); background-position: center;">
+    </div>
+</div>
+</div>
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+<div id="talks_container" class="container page__container" style="padding-left:150px;padding-right:150px;margin-left: 0px;margin-right: 0px;margin-top:10px;max-width:2000px;">
+
+    <div class="media align-items-center mb-headings">
+        <div class="media-body">
+             
+                
+        </div>
+        <div style="font-size: 1.2rem;" id="talks_order_by" class="media-right">
+                <span class="badge badge-secondary" style="padding: 1rem;" >
+                <div   class="dropdown ml-auto">
+                        <small  style="color:white" class=" text-uppercase mr-3">Order by</small>
+                        <a href="#" style="color:white" data-toggle="dropdown" class="dropdown-toggle">All Topics</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#" class="dropdown-item active">Most Viewed</a>
+                            <a href="#" class="dropdown-item">Recently Added</a>
+                          
+                        </div>
+                    </div>
+                </span>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="row" style="width:100%;margin: 0">
+
+
+
+
+
+            <div class="col-md-4 col-sm-12 col-12">
+                    <div class="card mb-2 img__wrap">
+                        <img class="card-img-top img__img"
+                            src="/static/shop/assets/images/talk.jpg"
+                            alt="Card image cap">
+                        <div class="img__description_layer">
+                            <div>
+                                <p class="img__description">
+                                    <a href={% url 'shop:talkdetail' %} class="nav-link">
+                                        <i style="font-size:4.5rem;color:rgb(160, 4, 4)"
+                                            class="material-icons">play_circle_outline</i>
+                                    </a>
+
+
+                                </p>
+                            </div>
+                            <div style="position:absolute;left:10px;top:0px;padding:5px;color:rgb(160, 4, 4)">
+                                <p>
+                                    <img src="{% static 'shop/assets/images/people/50/guy-6.jpg' %}" alt="Avatar"
+                                        class="rounded-circle" width="40">
+
+
+
+                                </p>
+                            </div>
+
+
+
+                            <div style="position:absolute;right:10px;top:0px;padding:5px;color:rgb(160, 4, 4)">
+                                <p>
+                                    <i style="font-size: 1rem;color:rgb(160, 4, 4)"
+                                        class="material-icons">access_time</i>
+                                    8m
+
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="card-body">
+                            <h4 style="font-size: 1.2rem;font-weight: 550;" class="card-title">Space Travel
+                            </h4>
+
+                            <p>
+                                Space or Time? Find out which carries more density
+                            </p>
+
+
+                        </div>
+                    </div>
+            </div>
+          
+
+         
+
+          
+                
+
+         
+       
+
+    </div>
+
+
+</div>
+
+
+{% endblock content %}
+
+
+{% block javascript %}
+
+<script>
+    $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function () {
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        for (var i = 0; i < 4; i++) {
+            next = next.next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    });
+
+    $('#popoverData').popover();
+</script>
+
+
+
+<script type="text/javascript">
+    function SwapDivs(da, db) {
+        var d = document.getElementById(da);
+        if (d.style.display == "block") {
+            d.style.display = "none";
+            document.getElementById(db).style.display = "block";
+        } else {
+            d.style.display = "block";
+            document.getElementById(db).style.display = "none";
+        }
+    }
+</script>
+
+{% endblock %}

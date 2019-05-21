@@ -1,0 +1,148 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+
+{% block title %}
+Talk Details
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+<div id="course_container" class="container page__container"
+    style="padding-left:150px;padding-right:150px;margin-left: 0px;margin-right: 0px;margin-top:10px;max-width:2000px;">
+
+    <div class="media align-items-center mb-headings">
+            <div class="media-body">
+                  
+                    
+            </div>
+           
+        </div>
+        <div class="clearfix"></div>
+
+    <!-- <span class="badge badge-secondary" > -->
+    <h1  style="font-weight:600; color: white;font-size: 1.4rem;">Space Travel</h1>
+<!-- </span> -->
+
+
+   
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/97243285?title=0&amp;byline=0&amp;portrait=0" allowfullscreen=""></iframe>
+                </div>
+                <!-- <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta eius enim inventoreus optio ratione veritatis. Beatae deserunt illum ipsam magniima mollitia officiis quia tempora!
+                </div> -->
+            </div>
+
+           
+        </div>
+        <div class="col-md-4">
+           
+            <div class="card">
+                <div class="card-header">
+                    <div class="media align-items-center">
+                        <div class="media-left">
+                            <img src="/static/shop/assets/images/people/50/guy-6.jpg" alt="About Adrian" width="50" class="rounded-circle">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="card-title"><a href="">Mahmoud Qotb</a></h4>
+                            <p class="card-subtitle">Instructor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>Having over 12 years exp. Mahmoud is one of the lead UI designers in the industry Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, aut.</p>
+                    <a href="#" class="btn btn-light"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="btn btn-light"><i class="fab fa-twitter"></i></a>
+                    <!-- <a href="#" class="btn btn-light"><i class="fab fa-github"></i></a> -->
+                </div>
+            </div>
+            <div class="card">
+                    <div class="card-header">
+                            <h4 class="card-title">Duration</h4>
+                        </div>
+                <ul class="list-group list-group-fit">
+                    
+                    <li class="list-group-item">
+                        <div class="media align-items-center">
+                            <div class="media-left">
+                                <i class="material-icons text-muted-light">schedule</i>
+                            </div>
+                            <div class="media-body">
+                                8  <small class="text-muted">min</small> 34  <small class="text-muted"> sec</small> 
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Ratings</h4>
+                </div>
+                <div class="card-body">
+                    <div class="rating">
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_border</i>
+                    </div>
+                    <small class="text-muted">20 ratings</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock content %}
+
+
+{% block javascript %}
+
+<script>
+    $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function () {
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        for (var i = 0; i < 4; i++) {
+            next = next.next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    });
+
+    $('#popoverData').popover();
+</script>
+
+
+
+<script type="text/javascript">
+    function SwapDivs(da, db) {
+        var d = document.getElementById(da);
+        if (d.style.display == "block") {
+            d.style.display = "none";
+            document.getElementById(db).style.display = "block";
+        } else {
+            d.style.display = "block";
+            document.getElementById(db).style.display = "none";
+        }
+    }
+
+    // $(document).on('click', '')
+</script>
+
+{% endblock %}

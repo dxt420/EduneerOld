@@ -1,0 +1,188 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+
+{% block title %}
+Courses
+{% endblock %}
+
+{% block logo %}
+<div id="logo-box" class="bg-primary mdk-box js-mdk-box mb-0" style="height: 292px;"
+    data-effects="parallax-background blend-background">
+    <div class="mdk-box__bg">
+        <div class="mdk-box__bg-front"
+            style="background-image: url(/static/shop/assets/images/eduneer_courses.png); background-position: center;">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+<div id="course_container" class="container page__container"
+    style="padding-left:150px;padding-right:150px;margin-left: 0px;margin-right: 0px;margin-top:10px;max-width:2000px;">
+
+    <div class="media align-items-center mb-headings">
+
+        <div class="media-body">
+
+
+
+
+
+        </div>
+        <div style="top: 0.5rem;right: 4%;" class="dropdown media-right">
+
+            <a href="#" data-toggle="dropdown" class="btn btn-white"><i class="material-icons mr-sm-2">tune</i>
+                <span class="d-sm-block">Filter</span></a>
+
+            <div class="d-flex flex-wrap2 align-items-center mb-headings">
+                <div class="dropdown-menu dropdown-menu-right">
+                    <form>
+                        <div class="dropdown-item d-flex flex-column">
+                            <div class="form-group">
+                                <label for="custom-select" class="form-label">Category</label><br>
+                                <select id="custom-select" class="form-control custom-select" style="width: 200px;">
+                                    <option selected>All categories</option>
+                                    <option value="1">Mechanical</option>
+                                    <option value="2">Electrical</option>
+                                    <option value="3">Software</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="published01" class="form-label">Price</label><br>
+                                <select id="published01" class="form-control custom-select" style="width: 200px;">
+                                    <option selected> </option>
+                                    <option value="1">Highest to Lowest </option>
+                                    <option value="2">Lowest to Highest </option>
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="time" class="form-label">Published</label><br>
+                                <select id="time" class="form-control custom-select" style="width: 200px;">
+                                    <option selected> </option>
+                                    <option value="1">Recently Added </option>
+
+                                </select>
+                            </div>
+                            <a href="#">Clear filters</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="row" style="width:100%;margin-right: 0px !important;margin-left: 0px !important;">
+
+
+
+        <div class="col-md-6 col-sm-12 col-12">
+            <div class="card mb-2 img__wrap">
+                <img class="card-img-top img__img"
+                    src="/static/shop/assets/images/game.png"
+                    alt="Card image cap">
+                <div class="img__description_layer">
+                    <div>
+                        <p class="img__description">
+                            <a href={% url 'shop:coursedetail' %} class="nav-link">
+                                <i style="font-size:4.5rem;color:rgb(160, 4, 4)"
+                                    class="material-icons">play_circle_outline</i>
+                            </a>
+
+
+                        </p>
+                    </div>
+
+                    <div id="bb" style="position:absolute;left:10px;top:0px;padding:5px;color:rgb(160, 4, 4)">
+                        <p>
+                            <img id="cc" src="{% static 'shop/assets/images/people/50/guy-6.jpg' %}" alt="Avatar"
+                                class="rounded-circle" width="40">
+                            Mahmoud Khirallah
+
+
+                        </p>
+                    </div>
+
+                    <div id="aa" style="position:absolute;right:10px;top:0px;padding:5px;color:rgb(160, 4, 4)">
+                        <p>
+                            <i id="timer-icon" style="color:rgb(160, 4, 4)" class="material-icons">access_time</i>
+                            21h 12m
+
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="card-body">
+                    <h4 style="font-weight: 600" class="card-title">Introduction to Game Development <span id="pricer"
+                            class="badge badge-pill badge-danger"
+                            style="font-size: 1.2rem;bottom:-5px;right:-5px;position: absolute;">$15</span>
+                    </h4>
+                    <p>Learn about the development of 2D and 3D interactive games in this hands-on course, as you explore the design of games such as Super Mario Bros., Pokémon, Angry Birds, and more
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+       
+    </div>
+
+
+</div>
+
+
+{% endblock content %}
+
+
+{% block javascript %}
+
+<script>
+    $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function () {
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        for (var i = 0; i < 4; i++) {
+            next = next.next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    });
+
+    $('#popoverData').popover();
+</script>
+
+
+
+<script type="text/javascript">
+    function SwapDivs(da, db) {
+        var d = document.getElementById(da);
+        if (d.style.display == "block") {
+            d.style.display = "none";
+            document.getElementById(db).style.display = "block";
+        } else {
+            d.style.display = "block";
+            document.getElementById(db).style.display = "none";
+        }
+    }
+
+    // $(document).on('click', '')
+</script>
+
+{% endblock %}

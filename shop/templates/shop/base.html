@@ -1,0 +1,591 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>EDUNEER | {% block title %}{% endblock %}</title>
+
+    
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'shop/assets/images/eduneer-icon.png' %}">
+
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="{% static 'shop/assets/vendor/perfect-scrollbar.css' %}" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="{% static 'shop/assets/css/material-icons.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'shop/assets/css/material-icons.rtl.css' %}" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="{% static 'shop/assets/css/fontawesome.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'shop/assets/css/fontawesome.rtl.css' %}" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="{% static 'shop/assets/css/app.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'shop/assets/css/app.rtl.css' %}" rel="stylesheet">
+
+    <link type="text/css" href="{% static 'shop/assets/css/fancytree.css' %}" rel="stylesheet">
+
+    {% block compiledcss %}{% endblock %}
+
+    <style type="text/css">
+        @font-face {
+            font-family: "OCR A Std Regular";
+            src: url(/static/shop/assets/fonts/ocr/ocr.ttf) format("truetype");
+        }
+
+        .customfont {
+            font-family: "OCR A Std Regular";
+        }
+
+        #diva_id:hover {
+            content: " ";
+            z-index: 10;
+            display: block;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .img__description_layer {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(33, 150, 243, 0.6);
+            color: #fff;
+            visibility: hidden;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* transition effect. not necessary */
+            transition: opacity .2s, visibility .2s;
+        }
+
+       
+
+        .img__wrap:hover .img__description_layer {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .img__description {
+            transition: .2s;
+            transform: translateY(1em);
+        }
+
+        .img__wrap:hover .img__description {
+            transform: translateY(0);
+        }
+        #contact_submit::before{
+            display:none;
+        }
+
+        @media (max-width:576px) {
+            /* #aa {
+        
+                left:15px;
+                margin-top:35px;
+                font-size: 1rem;
+            }
+
+            #timer-icon{
+
+                font-size: 1.5rem;
+
+            }
+
+
+
+            #bb {
+                position:absolute;
+                left:10px;
+                top:0px;
+                font-size: 0.6rem;
+            }
+
+            #cc {
+                width:23px;
+            } */
+
+
+            #pricer{
+                bottom:-10px;
+                right:0px;
+            }
+
+            #logo-box{
+                height:115px !important;
+            }
+            .navbar-toggler{
+                visibility: visible !important;
+            }
+            #course_container{
+                padding-left:5px !important;
+                padding-right:5px !important;
+                margin-top: 60px !important;
+                padding-bottom: 100px !important;
+            }
+            #talks_container{
+                padding-left:5px !important;
+                padding-right:5px !important;
+
+                
+            }
+            #stickyheaderParent{
+                position: fixed;
+                z-index: 5;
+                width: 100%;
+                display: block !important;
+                
+            }
+
+            #stickycartParent{
+                position: fixed;
+                bottom: 0;
+                z-index: 5;
+                width: 100%;
+                
+                display: block !important;
+                
+            }
+            #stickyheader{
+                display: inline;
+                width: 100%;
+                text-align: center;
+              
+                
+            }
+            #stickyheader>li{
+                float: left;
+                padding-left: 10px;
+                width: auto;
+                
+                
+            }
+            .nav-link.active{
+                /* text-decoration: underline; */
+            }
+            #payment{
+                display: none;
+            }
+            #cart_row tr>td{
+                white-space: ;
+            }
+            #cart_image{
+                display: none;
+            }
+            #qtybox{
+                width: 40px !important;
+            }
+            #pxbox{
+                white-space: normal;
+
+            }
+            #cart_close{
+                position: absolute;
+                left: 93%;
+                top: 11%;
+            }
+        }
+
+       
+    </style>
+
+
+
+
+
+
+
+
+</head>
+
+<body class=" fixed-layout">
+
+
+    <div class="preloader">
+        <div class="sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Header Layout -->
+    <div class="mdk-header-layout js-mdk-header-layout">
+
+        <!-- Header -->
+
+        <div id="header" class="mdk-header bg-dark js-mdk-header m-0" data-fixed data-effects="waterfall">
+            <div class="mdk-header__content">
+
+                <!-- Navbar -->
+                <nav id="default-navbar" class="navbar navbar-expand navbar-dark bg-primary m-0">
+                    <div class="container">
+                    <button style="visibility:hidden;" class="navbar-toggler d-block" data-toggle="sidebar" type="button">
+                            <span class="material-icons">menu</span>
+                        </button>
+
+                        <!-- Brand -->
+                        <a href="" class="navbar-brand">
+                            <img src="{% static 'shop/assets/images/eduneer-icon.png' %}" style="width:42px"
+                                class="mr-2" alt="Eduneer" />
+                            <span class="d-none d-xs-md-block customfont">EDUNEER</span>
+                        </a>
+
+                        <!-- Search -->
+                        <!-- <form class="search-form d-none d-md-flex">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <button class="btn" type="button"><i
+                                    class="material-icons font-size-24pt">search</i></button>
+                        </form> -->
+                        <!-- // END Search -->
+
+                        <div class="flex"></div>
+
+                        <!-- Menu -->
+                        <ul class="nav navbar-nav flex-nowrap d-none d-lg-flex">
+                            <li class="nav-item {{home_active}}">
+                                <a class="nav-link" href={% url 'shop:home' %}>Home</a>
+                            </li>
+                            <li class="nav-item {{courses_active}}">
+                                <a class="nav-link" href={% url 'shop:courses' %}>Courses</a>
+                            </li>
+                            {% if user %}
+                            <li class="nav-item {{my_courses_active}}">
+                                <a class="nav-link" href={% url 'shop:mycourses' %}>My Courses</a>
+                            </li>
+                            {% else %}
+                            {% endif %}
+                            <li class="nav-item {{talks_active}}">
+                                <a class="nav-link" href={% url 'shop:talks' %}>Talks</a>
+                            </li>
+                            <li class="nav-item {{news_active}}">
+                                <a class="nav-link" href={% url 'shop:news' %}>News</a>
+                            </li>
+                            <li class="nav-item {{about_active}}">
+                                <a class="nav-link" href={% url 'shop:about' %}>About</a>
+                            </li>
+                            <li class="nav-item {{contact_active}}">
+                                <a class="nav-link" href={% url 'shop:contact' %}>Contact</a>
+                            </li>
+
+                            <li class="nav-item {{partners_active}}">
+                                <a class="nav-link" href={% url 'shop:partners' %}>Partners</a>
+                            </li>
+                        </ul>
+
+                        <!-- Menu -->
+                        <ul class="nav navbar-nav flex-nowrap">
+
+                            <li class="nav-item d-none d-md-flex {{cart_active}}">
+                                <a href={% url 'shop:cart' %} class="nav-link">
+                                    <i class="material-icons">shopping_cart</i>
+                                </a>
+                            </li>
+
+
+
+{% if request.user.is_authenticated %}
+
+
+{% for a in backends.associated %}
+{% if a.provider == 'facebook' %}
+  <!-- <div class="col-md-6 text-center">
+      <img src="{{as.extra_data.picture.data.url}}" alt="" width="150" height="150" style="border-radius: 50%">
+  </div>
+  <div class="col-md-6 social-container my-2">                 <p> Signed in via:  {{ a.provider }} </p>
+      <p> Name:  {{ a.extra_data.name }} </p>
+      <p> Provider url: <a href="{{a.extra_data.profile_url}}">link</a></p>
+  </div> -->
+
+                            <!-- User dropdown -->
+                            <li class="nav-item dropdown ml-1 ml-md-3">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"><img
+                                        src={{a.extra_data.picture.data.url}} alt="Avatar"
+                                        class="rounded-circle" width="40"></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#">
+                                        {{ request.user.first_name }} {{ request.user.last_name }}
+                                        
+                                    </a>
+                                    <a class="dropdown-item" href="">
+                                        
+                                        <i class="material-icons">edit</i> Edit Account
+                                    </a>
+                                    
+                                    <a class="dropdown-item" href="">
+                                        <i class="material-icons">person</i> Public Profile
+                                    </a>
+                                    <a class="dropdown-item" href={% url 'shop:logout' %}>
+                                        <i class="material-icons">lock</i> Logout
+                                    </a>
+                                </div>
+                            </li> 
+                            <!-- // END User dropdown -->
+
+                            {% endif %}
+
+                            {% if a.provider == 'google-oauth2' %}
+  <!-- <div class="col-md-6 text-center">
+      <img src="{{as.extra_data.picture.data.url}}" alt="" width="150" height="150" style="border-radius: 50%">
+  </div>
+  <div class="col-md-6 social-container my-2">                 <p> Signed in via:  {{ a.provider }} </p>
+      <p> Name:  {{ a.extra_data.name }} </p>
+      <p> Provider url: <a href="{{a.extra_data.profile_url}}">link</a></p>
+  </div> -->
+
+                            <!-- User dropdown -->
+                            <li class="nav-item dropdown ml-1 ml-md-3">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"><img
+                                        src={{a.extra_data.picture}} alt="Avatar"
+                                        class="rounded-circle" width="40"></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#">
+                                        {{ request.user.first_name }} {{ request.user.last_name }}
+                                        
+                                    </a>
+                                    <a class="dropdown-item" href="">
+                                        
+                                        <i class="material-icons">edit</i> Edit Account
+                                    </a>
+                                    
+                                    <a class="dropdown-item" href="">
+                                        <i class="material-icons">person</i> Public Profile
+                                    </a>
+                                    <a class="dropdown-item" href={% url 'shop:logout' %}>
+                                        <i class="material-icons">lock</i> Logout
+                                    </a>
+                                </div>
+                            </li> 
+                            <!-- // END User dropdown -->
+
+                            {% endif %}
+{% endfor %}
+
+{% else %}
+
+     <li class="nav-item d-none d-md-flex">
+                                    <a href={% url 'shop:login' %} class="btn btn-secondary">Login</a>
+                                    
+                            </li>
+                            <li class="d-none d-md-flex">
+                                    
+                                    <span style="padding-top:15px">&nbsp;&nbsp;&nbsp;</span>
+                            </li>
+
+
+                            <li class="nav-item d-none d-md-flex">
+                                    
+                                    <a href={% url 'shop:register' %} class="btn btn-secondary">Register</a>
+                            </li>
+
+                           
+
+
+{% endif %}
+
+                       
+
+
+
+
+
+                        </ul>
+                        <!-- // END Menu -->
+                    </div>
+                </nav>
+                <!-- // END Navbar -->
+
+            </div>
+        </div>
+
+        <!-- // END Header -->
+
+        <!-- Header Layout Content -->
+        <div class="mdk-header-layout__content d-flex flex-column">
+
+                {% block stickyheader %}{% endblock %}
+           
+
+            <div class="page pt-0" style="background:linear-gradient(to right, #11bacb 0%, #2575fc 100%) !important;">
+
+              
+
+                
+                {% block logo %} 
+                
+                {% endblock %}
+
+                {% block content %} 
+                
+                {% endblock content %}
+
+
+            
+
+
+                <div class="container page__container">
+                      
+                    <div class="footer" style="text-align: center">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            
+                        Copyright &copy; <script type="text/javascript">
+                            document.write(new Date().getFullYear());
+                        </script> - <a href="" style="color:rgb(160, 4, 4);">EDUNEER</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // END Header Layout Content -->
+
+    </div>
+    <!-- // END Header Layout -->
+
+  <div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+        <div class="mdk-drawer__content ">
+            <div class="sidebar sidebar-left sidebar-dark bg-dark o-hidden" data-perfect-scrollbar>
+                <div class="sidebar-p-y">
+                    <div class="sidebar-heading">EDUNEER</div>
+                    <ul class="sidebar-menu sm-active-button-bg">
+                        <li class="sidebar-menu-item {{home_active}}">
+                            <a class="sidebar-menu-button" href={% url 'shop:home' %}>
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">home</i> Home
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item {{courses_active}}">
+                            <a class="sidebar-menu-button" href={% url 'shop:courses' %}>
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">school</i> Courses
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item {{talks_active}}">
+                            <a class="sidebar-menu-button" href={% url 'shop:talks' %}>
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">chat_bubble_outline</i> Talks
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item {{news_active}}">
+                            <a class="sidebar-menu-button" href={% url 'shop:news' %}>
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">assignment</i> News
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item {{about_active}}">
+                            <a class="sidebar-menu-button" href={% url 'shop:about' %}>
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">info</i> About
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item {{contact_active}}">
+                            <a class="sidebar-menu-button" href={% url 'shop:contact' %}>
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">contact_phone</i> Contact
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item {{partners_active}}">
+                            <a class="sidebar-menu-button" href={% url 'shop:partners' %}>
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">local_parking</i> Partners
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Account menu -->
+                    <div class="sidebar-heading">Account</div>
+                    <ul class="sidebar-menu">
+                         <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="#">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">account_box</i> Login
+                            </a>
+                        </li>
+                         <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="#">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">https</i> Sign up
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="sidebar-heading"></div>
+                    <ul class="sidebar-menu sm-active-button-bg">
+                        <li class="sidebar-menu-item {{cart_active}}">
+                            <a class="sidebar-menu-button" href={% url 'shop:cart' %}>
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">shopping_cart</i> Cart 
+                            </a>
+                        </li>
+                     
+                    </ul>
+                   
+
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="{% static 'shop/assets/vendor/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'shop/assets/vendor/popper.min.js' %}"></script>
+    <script src="{% static 'shop/assets/vendor/bootstrap.min.js' %}"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="{% static 'shop/assets/vendor/perfect-scrollbar.min.js' %}"></script>
+
+    <!-- MDK -->
+    <script src="{% static 'shop/assets/vendor/dom-factory.js' %}"></script>
+    <script src="{% static 'shop/assets/vendor/material-design-kit.js' %}"></script>
+
+    <!-- App JS -->
+    <script src="{% static 'shop/assets/js/app.js' %}"></script>
+
+    <!-- Highlight.js -->
+    <script src="{% static 'shop/assets/js/hljs.js' %}"></script>
+
+    <script src="{% static 'shop/assets/js/app-settings.js' %}"></script>
+
+     <!-- Touchspin -->
+     <script src="/static/shop/assets/vendor/jquery.bootstrap-touchspin.js"></script>
+     <script src="/static/shop/assets/js/touchspin.js"></script>
+ 
+     <!-- Flatpickr -->
+     <script src="/static/shop/assets/vendor/flatpickr/flatpickr.min.js"></script>
+     <script src="/static/shop/assets/js/flatpickr.js"></script>
+ 
+     <!-- jQuery Mask Plugin -->
+     <script src="/static/shop/assets/vendor/jquery.mask.min.js"></script>
+ 
+     <!-- Quill -->
+     <script src="/static/shop/assets/vendor/quill.min.js"></script>
+     <script src="/static/shop/assets/js/quill.js"></script>
+ 
+
+    <!-- <script src="{% static 'shop/assets/js/jquery-ui.min.js' %}"></script> -->
+
+    <!-- <script src="{% static 'shop/assets/vendor/jquery.fancytree-all.min.js' %}"></script> -->
+
+
+    <!-- <script src="{% static 'shop/assets/js/fancytree.js' %}"></script> -->
+
+
+
+    {% block javascript %}{% endblock %}
+
+
+
+</body>
+
+
+</html>

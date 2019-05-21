@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Signup</title>
+
+ <!-- Favicon -->
+ <link rel="icon" href="{% static 'shop/assets/images/eduneer-icon.png' %}">
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="/static/shop/assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="/static/shop/assets/css/material-icons.css" rel="stylesheet">
+    <link type="text/css" href="/static/shop/assets/css/material-icons.rtl.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="/static/shop/assets/css/fontawesome.css" rel="stylesheet">
+    <link type="text/css" href="/static/shop/assets/css/fontawesome.rtl.css" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="/static/shop/assets/css/app.css" rel="stylesheet">
+    <link type="text/css" href="/static/shop/assets/css/app.rtl.css" rel="stylesheet">
+
+
+
+    <style type="text/css">
+        @font-face {
+            font-family: "OCR A Std Regular";
+            src: url(/static/shop/assets/fonts/ocr/ocr.ttf) format("truetype");
+        }
+
+        .customfont {
+            font-family: "OCR A Std Regular";
+            font-size: 1.5rem;
+            color: white;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body class="login" style="background:linear-gradient(to right, #11bacb 0%, #2575fc 100%) !important;">
+
+
+    <div class="d-flex align-items-center" style="min-height: 100vh">
+        <div class="col-sm-8 col-md-6 col-lg-4 mx-auto" style="min-width: 300px;">
+            <div class="text-center mt-5 mb-1">
+                <div class="avatar avatar-lg">
+                    <img src="/static/shop/assets/images/eduneer-icon.png" class="avatar-img rounded-circle" alt="LearnPlus" />
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mb-5 navbar-light">
+                <span class="d-none d-xs-md-block customfont">EDUNEER</span>
+            </div>
+            <div class="card navbar-shadow">
+                <div class="card-header text-center">
+                    <h4 class="card-title">Sign Up</h4>
+                    <p class="card-subtitle">Create a new account</p>
+                </div>
+                <div class="card-body">
+
+                    <a href="" class="btn btn-light btn-block">
+                        <span class="fab fa-google mr-2"></span>
+                        Continue with Google
+                    </a>
+
+
+                    <a href="" class="btn btn-light btn-block">
+                            <span class="fab fa-facebook mr-2"></span>
+                            Continue with Facebook
+                    </a>
+    
+                    <div class="page-separator">
+                        <div class="page-separator__text">or</div>
+                    </div>
+
+                    <form action="" novalidate method="get">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Name:</label>
+                            <div class="input-group input-group-merge">
+                                <input id="name" type="text" required="" class="form-control form-control-prepended" placeholder="Your first and last name">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <span class="far fa-user"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email address:</label>
+                            <div class="input-group input-group-merge">
+                                <input id="email" type="email" required="" class="form-control form-control-prepended" placeholder="Your email address">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <span class="far fa-envelope"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Phone</label>
+                            <input id="phone" type="tel" class="form-control bfh-phone" placeholder="Phone: (000) 000-0000)" data-mask="(000) 000-0000">
+                        </div>
+                       
+                        <div class="form-group">
+                            <label class="form-label" for="password">Password:</label>
+                            <div class="input-group input-group-merge">
+                                <input id="password" type="password" required="" class="form-control form-control-prepended" placeholder="Choose a password">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <span class="far fa-key"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="password2">Password:</label>
+                            <div class="input-group input-group-merge">
+                                <input id="password2" type="password" required="" class="form-control form-control-prepended" placeholder="Confirm password">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <span class="far fa-key"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block mb-3">Sign Up</button>
+                        <div class="form-group text-center mb-0">
+                            <div class="custom-control custom-checkbox">
+                                <input id="terms" type="checkbox" class="custom-control-input" checked required="">
+                                <label for="terms" class="custom-control-label text-black-70">I agree to the <a href="#" class="text-black-70" style="text-decoration: underline;">Terms of Use</a></label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center text-black-50">Already signed up? <a href={% url 'shop:login' %}>Login</a></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="/static/shop/assets/vendor/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="/static/shop/assets/vendor/popper.min.js"></script>
+    <script src="/static/shop/assets/vendor/bootstrap.min.js"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="/static/shop/assets/vendor/perfect-scrollbar.min.js"></script>
+
+    <!-- MDK -->
+    <script src="/static/shop/assets/vendor/dom-factory.js"></script>
+    <script src="/static/shop/assets/vendor/material-design-kit.js"></script>
+
+    <!-- App JS -->
+    <script src="/static/shop/assets/js/app.js"></script>
+
+    <!-- Highlight.js -->
+    <script src="/static/shop/assets/js/hljs.js"></script>
+
+    <!-- App Settings (safe to remove) -->
+    <script src="/static/shop/assets/js/app-settings.js"></script>
+
+
+
+
+
+</body>
+
+
+</html>

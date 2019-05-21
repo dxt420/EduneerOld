@@ -1,0 +1,81 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+
+{% block title %}
+News
+{% endblock %}
+
+{% block logo %} 
+<div id="logo-box" class="bg-primary mdk-box js-mdk-box mb-0" style="height: 292px;"
+data-effects="parallax-background blend-background">
+<div class="mdk-box__bg">
+    <div class="mdk-box__bg-front"
+        style="background-image: url(/static/shop/assets/images/eduneer_news.png); background-position: center;">
+    </div>
+</div>
+</div>
+
+{% endblock %} 
+
+
+
+
+{% block content %}
+
+
+<div class="container page__container mb-3" style="margin-top:30px;">
+        <div class="row flex-sm-nowrap">
+           
+            <div class="col-sm">
+
+
+
+               
+
+             
+
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex mb-1">
+                          
+                            <div class="flex">
+                                <div class="d-flex align-items-center mb-1">
+                                    <strong class="" style="font-size: 1.8rem;">Step towards light-based, brain-like computing chip</strong>
+                                    <small class="ml-auto text-muted">1 week ago</small>
+                                </div>
+                                <div>
+                                    <!-- <p>Checkout our new  <a href={% url 'shop:talkdetail' %}>Learn the patterns in Galactical stars </a>  -->
+                                </div>
+
+                                <a href="#" class="card my-3 text-body text-decoration-0">
+                                    <img src="/static/shop/assets/images/news.jpg" alt="image" class="card-img-top">
+                                    <span class="card-footer d-flex flex-column">
+                                        <strong>Scientists have succeeded in developing a piece of hardware which could pave the way for creating computers resembling the human brain. They produced a chip containing a network of artificial neurons that works with light and can imitate neurons and their synapses. This network is able to 'learn' information and use this as a basis for computing. The approach could be used later in many different fields for evaluating patterns in large quantities of data.</strong>
+                                        <!-- <span class="text-black-70">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span> -->
+                                        <!-- <span class="text-muted">eduneer.com</span> -->
+                                    </span>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <a href="#" class="text-muted d-flex align-items-center text-decoration-0"><i class="material-icons mr-1" style="font-size: inherit;">favorite_border</i> 156</a>
+                            <a href="#" class="text-muted d-flex align-items-center text-decoration-0 ml-3"><i class="material-icons mr-1" style="font-size: inherit;">thumb_up</i> 351</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}
+
+
+{% block javascript %}
+
+
+
+{% endblock %}

@@ -1,0 +1,644 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+
+{% block title %}
+Course Detail
+{% endblock %}
+
+
+{% block compiledcss %}
+<link rel='stylesheet' id='compiled.css-css' href={% static 'shop/assets/css/style.css' %} type='text/css' media='all' />
+
+{% endblock %}
+
+
+{% block stickyheader %}
+
+<div id="stickyheaderParent" style="display: none" class="page__header">
+        <div class="navbar bg-dark navbar-dark navbar-expand-sm d-none2 d-md-flex2">
+            <div class="container">
+                    <ul id="stickyheader" class="nav navbar-nav" >
+                            <li class="coco nav-item ">
+                                <a class="nav-link"   href="#overview">Overview</a>
+                            </li>
+                            <li class="coco nav-item ">
+                                <a class="nav-link" href="#requirements">Requirements</a>
+                            </li>
+                            <li class="coco nav-item ">
+                                <a class="nav-link" href="#description">Description</a>
+                            </li>
+                            <li class="coco nav-item ">
+                                <a class="nav-link" href="#instructor">Instructor</a>
+                            </li>
+                           
+                        </ul>
+               
+
+               
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+<div id="course_container" class="container page__container"
+    style="padding-left:150px;padding-right:150px;margin-left: 0px;margin-right: 0px;margin-top:10px;max-width:2000px;">
+
+  
+    
+
+    <div class="media align-items-center mb-headings">
+            <div class="media-body">
+                   
+                    
+            </div>
+           
+        </div>
+        <div class="clearfix"></div>
+
+    <!-- <span class="badge badge-secondary" > -->
+    <h1  style="font-weight:600; color: white;font-size: 1.4rem;">  Aeronautical engineering & Astronomy</h1>
+<!-- </span> -->
+
+
+   
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/97243285?title=0&amp;byline=0&amp;portrait=0" allowfullscreen=""></iframe>
+                </div>
+                <div class="card-body" id="overview">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta eius enim inventoreus optio ratione veritatis. Beatae deserunt illum ipsam magniima mollitia officiis quia tempora!
+                </div>
+            </div>
+
+
+            <div  class="card">
+                    <div class="clever-faqs">
+                          
+                         
+                          
+        
+                            <div class="accordions"  role="tablist" aria-multiselectable="true">
+        
+                             
+        
+                                <!-- Single Accordian Area -->
+                                <div class="panel single-accordion">
+                                    
+                                    <h6>
+                                        <a role="button" style="font-size:1.1rem ;text-decoration: none" class="" aria-expanded="true" aria-controls="collapseT" data-parent="#overview" data-toggle="collapse" href="#collapseT">course includes
+                                        <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                        <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                        </a>
+                                    </h6>
+                                    <div id="collapseT" class="accordion-content collapse show">
+                                            <ul class="card list-group list-group-fit">
+                                                    <li class="list-group-item">
+                                                            <div class="media">
+                                                                    <div class="media-left text-muted-light">
+                                                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">get_app</i>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                            <div class="">2 Downladable Resources</div>
+                                                                    </div>
+                                                                   
+                                                                </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                            <div class="media">
+                                                                    <div class="media-left text-muted-light">
+                                                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">receipt</i>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                            <div class="">Certification of completion</div>
+                                                                    </div>
+                                                                   
+                                                                </div>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                                <div class="media">
+                                                                    <div class="media-left text-muted-light">
+                                                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">av_timer</i>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                            <div class="">Full lifetime access</div>
+                                                                    </div>
+                                                                   
+                                                                </div>
+                                                            </li>
+                                                  
+                                                 
+                                                
+                                        </ul>
+                                    </div>
+                                </div>
+        
+                              
+        
+                                
+                            </div>
+        
+                       
+        
+                        </div>
+             </div>
+
+            <div class="card">
+                    <div class="clever-faqs">
+                          
+                         
+                          
+        
+                            <div class="accordions" id="accordionx" role="tablist" aria-multiselectable="true">
+        
+                             
+        
+                                <!-- Single Accordian Area -->
+                                <div class="panel single-accordion">
+                                    
+                                    <h6>
+                                        <a role="button" style="font-size:1.1rem ;text-decoration: none" class="" aria-expanded="true" aria-controls="collapseTwox" data-parent="#accordionx" data-toggle="collapse" href="#collapseTwox">What you'll learn
+                                        <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                        <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                        </a>
+                                    </h6>
+                                    <div id="requirements"></div>
+                                    
+                                    <div id="collapseTwox" class="accordion-content collapse show">
+                                            <ul class="card list-group list-group-fit">
+                                                    <li class="list-group-item">
+                                                            <div class="media">
+                                                                    <div class="media-left text-muted-light">
+                                                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">check</i>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                            <div class="">MVC</div>
+                                                                    </div>
+                                                                   
+                                                                </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                            <div class="media">
+                                                                    <div class="media-left text-muted-light">
+                                                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">check</i>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                            <div class="">MVC</div>
+                                                                    </div>
+                                                                   
+                                                                </div>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                                <div class="media">
+                                                                    <div class="media-left text-muted-light">
+                                                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">check</i>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                            <div class="">MVC</div>
+                                                                    </div>
+                                                                   
+                                                                </div>
+                                                            </li>
+                                                  
+                                                 
+                                                
+                                        </ul>
+
+                                        
+                                    </div>
+                                    
+                                </div>
+        
+                              
+        
+                                
+                            </div>
+        
+                       
+        
+                        </div>
+             </div>
+
+
+                    <div class="card">
+                            <div class="clever-faqs">
+                                  
+                                 
+                                  
+                
+                                    <div class="accordions" id="accordionxx" role="tablist" aria-multiselectable="true">
+                
+                                     
+                
+                                        <!-- Single Accordian Area -->
+                                        <div class="panel single-accordion">
+                                            
+                                            <h6>
+                                                <a role="button" style="font-size:1.1rem ;text-decoration: none" class="" aria-expanded="true" aria-controls="collapseTwoxx" data-parent="#accordionxx" data-toggle="collapse" href="#collapseTwoxx">Requirements
+                                                <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                                <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                                </a>
+                                            </h6>
+                                            <div id="description"></div>
+                                            <div id="collapseTwoxx" class="accordion-content collapse show">
+                                                    <ul class="card list-group list-group-fit">
+                                                            <li class="list-group-item">
+                                                                    <div class="media">
+                                                                            <div class="media-left text-muted-light">
+                                                                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">chevron_right</i>
+                                                                            </div>
+                                                                            <div class="media-body">
+                                                                                    <div class="">MVC</div>
+                                                                            </div>
+                                                                           
+                                                                        </div>
+                                                            </li>
+                                                          
+                                                            <li class="list-group-item">
+                                                                    <div class="media">
+                                                                            <div class="media-left text-muted-light">
+                                                                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">chevron_right</i>
+                                                                            </div>
+                                                                            <div class="media-body">
+                                                                                    <div class="">MVC</div>
+                                                                            </div>
+                                                                           
+                                                                        </div>
+                                                            </li>
+                                                    
+                                                    </ul>
+                                            </div>
+                                        </div>
+                
+                                     
+                
+                                        
+                                    </div>
+                
+                               
+                
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="card">
+                                    <div class="clever-faqs">
+                                          
+                                         
+                                          
+                        
+                                            <div class="accordions" id="accordionxxx" role="tablist" aria-multiselectable="true">
+                        
+                                             
+                        
+                                                <!-- Single Accordian Area -->
+                                                <div class="panel single-accordion">
+                                                    
+                                                    <h6>
+                                                        <a role="button" style="font-size:1.1rem ;text-decoration: none" class="" aria-expanded="true" aria-controls="collapseTwoxxx" data-parent="#accordionxxx" data-toggle="collapse" href="#collapseTwoxxx">Description
+                                                        <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                                        <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                                        </a>
+                                                    </h6>
+                                                    <div id="collapseTwoxxx" class="accordion-content collapse show">
+                                                           <p >
+                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta eius enim inventoreus optio ratione veritatis. Beatae deserunt illum ipsam magniima mollitia officiis quia tempora!
+                                                           </p>
+                                                    </div>
+                                                </div>
+                        
+                                              
+                        
+                                                
+                                            </div>
+                        
+                                       
+                        
+                                        </div>
+                                    </div>
+                
+
+            <div class="card">
+            <div class="clever-faqs">
+                    <div class="card-header">
+                            <h4 class="card-title">Curriculum</h4>
+                        </div>
+                 
+                    <div class="card-body">
+
+                    <div class="accordions" id="accordion" role="tablist" aria-multiselectable="true">
+
+                        <!-- Single Accordian Area -->
+                        <div class="panel single-accordion">
+                            <h6><a role="button" class="" aria-expanded="true" aria-controls="collapseOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                    
+                                           
+                                    
+                                    Course Overview
+                            <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                            <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                            </a></h6>
+                            <div id="collapseOne" class="accordion-content collapse show">
+                                <ul class="card list-group list-group-fit">
+                                            <li class="list-group-item active">
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <div class="text-muted">1.1</div>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <a class="text-white" href="#">Installation</a>
+                                                    </div>
+                                                    <div class="media-right">
+                                                        <small class="text-muted-light">2:03</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                  
+                                </ul>
+                               
+                            </div>
+                        </div>
+
+                        <!-- Single Accordian Area -->
+                        <div class="panel single-accordion">
+                            <h6>
+                                <a role="button" class="collapsed" aria-expanded="true" aria-controls="collapseTwo" data-parent="#accordion" data-toggle="collapse" href="#collapseTwo">Model View Controller
+                                <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                </a>
+                            </h6>
+                            <div id="collapseTwo" class="accordion-content collapse">
+                                    <ul class="card list-group list-group-fit">
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <div class="text-muted">2.1</div>
+                                                    </div>
+                                                    <div class="media-body">
+                                                            <div class="text-muted-light">MVC</div>
+                                                    </div>
+                                                    <div class="media-right">
+                                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">https</i>
+                                                        <small class="text-muted-light">12:03</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item ">
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                            <div class="text-muted">2.2</div>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <!-- <a  href="#">The MVC architectural pattern</a> -->
+                                                        <div class="text-muted-light">The MVC architectural pattern</div>
+                                                    </div>
+                                                    <div class="media-right">
+                                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">https</i>
+                                                        <small class="text-muted-light">25:01</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <div class="text-muted">2.3</div>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <!-- <a href="#">Database Models</a> -->
+                                                        <div class="text-muted-light">Database Models</div>
+                                                    </div>
+                                                    <div class="media-right">
+                                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">https</i>
+                                                        <small class="text-muted-light">53:10</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                         
+                                        
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Single Accordian Area -->
+                        <div class="panel single-accordion">
+                            <h6>
+                                <a role="button" aria-expanded="true" aria-controls="collapseThree" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseThree">Machine Learning Alogrithm
+                                <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                </a>
+                            </h6>
+                            <div id="collapseThree" class="accordion-content collapse">
+                                    <ul class="card list-group list-group-fit">
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <div class="text-muted">3.1</div>
+                                                    </div>
+                                                    <div class="media-body">
+                                                            <div class="text-muted-light">Deep Learning</div>
+                                                    </div>
+                                                    <div class="media-right">
+                                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">https</i>
+                                                        <small class="text-muted-light">12:03</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item ">
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                            <div class="text-muted">3.2</div>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <!-- <a  href="#">The MVC architectural pattern</a> -->
+                                                        <div class="text-muted-light">Stackoverflow Solutions</div>
+                                                    </div>
+                                                    <div class="media-right">
+                                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">https</i>
+                                                        <small class="text-muted-light">42:01</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                          
+                                         
+                                        
+                                </ul> 
+                            
+                            </div>
+                        </div>
+
+                        
+                    </div>
+
+                </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="payment" class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <p>
+                        <a href={% url 'shop:cart' %} class="btn btn-success btn-block flex-column">
+                                Purchase Course
+                                <strong>&dollar;4 USD</strong>
+                        </a>
+                    </p>
+                    <div class="page-separator">
+                            <div class="page-separator__text">or</div>
+                        </div>
+                    <p>
+                            <div id="instructor"></div>
+                            <a href="" class="btn btn-white btn-block flex-column">
+                                Add to Cart <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">shopping_cart</i>
+                               
+                            </a>
+                        </p>
+                       
+                      
+                  
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="media align-items-center">
+                        <div class="media-left">
+                            <img src="/static/shop/assets/images/people/50/guy-6.jpg" alt="About Adrian" width="50" class="rounded-circle">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="card-title"><a href="">Mahmoud Qotb</a></h4>
+                            <p class="card-subtitle">Instructor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>Having over 12 years exp. Mahmoud is one of the lead UI designers in the industry Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, aut.</p>
+                    <a href="#" class="btn btn-light"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="btn btn-light"><i class="fab fa-twitter"></i></a>
+                    <!-- <a href="#" class="btn btn-light"><i class="fab fa-github"></i></a> -->
+                </div>
+            </div>
+            <div class="card">
+                    <div class="card-header">
+                            <h4 class="card-title">Duration</h4>
+                        </div>
+                <ul class="list-group list-group-fit">
+                    
+                    <li class="list-group-item">
+                        <div class="media align-items-center">
+                            <div class="media-left">
+                                <i class="material-icons text-muted-light">schedule</i>
+                            </div>
+                            <div class="media-body">
+                                2 <small class="text-muted">hrs</small> &nbsp; 26 <small class="text-muted">min</small>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Ratings</h4>
+                </div>
+                <div class="card-body">
+                    <div class="rating">
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_border</i>
+                    </div>
+                    <small class="text-muted">20 ratings</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div id="stickycartParent" style="display: none" class="page__header">
+        <div style="background-color: #2196f3!important" class="navbar bg-dark navbar-dark navbar-expand-sm d-none2 d-md-flex2">
+            <div class="container">
+                <div class="button-list p-2">
+                    <a href={% url 'shop:cart' %} class="btn btn-success flex-column">
+                            Purchase Course
+                            <strong>&dollar;4 USD</strong>
+                    </a>
+                <a href="" class="btn btn-white flex-column">
+                    Add to Cart <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">shopping_cart</i>
+                   
+                </a>
+            </div>
+               
+
+               
+
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}
+
+
+{% block javascript %}
+
+<script>
+    $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function () {
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        for (var i = 0; i < 4; i++) {
+            next = next.next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    });
+
+    $('#popoverData').popover();
+</script>
+
+
+
+<script type="text/javascript">
+    function SwapDivs(da, db) {
+        var d = document.getElementById(da);
+        if (d.style.display == "block") {
+            d.style.display = "none";
+            document.getElementById(db).style.display = "block";
+        } else {
+            d.style.display = "block";
+            document.getElementById(db).style.display = "none";
+        }
+    }
+
+    // $(document).on('click', '')
+</script>
+
+
+
+<script type="text/javascript">
+   $('.coco a').click(function(){
+        $('.active').removeClass('active');
+        $(this).addClass('active');
+   });
+</script>
+
+{% endblock %}

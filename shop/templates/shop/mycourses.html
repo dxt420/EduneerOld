@@ -1,0 +1,139 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+
+{% block title %}
+My Courses
+{% endblock %}
+
+{% block logo %}
+<div id="logo-box" class="bg-primary mdk-box js-mdk-box mb-0" style="height: 292px;"
+    data-effects="parallax-background blend-background">
+    <div class="mdk-box__bg">
+        <div class="mdk-box__bg-front"
+            style="background-image: url(/static/shop/assets/images/eduneer_courses.png); background-position: center;">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+<div id="course_container" class="container page__container"
+    style="padding-left:150px;padding-right:150px;margin-left: 0px;margin-right: 0px;margin-top:10px;max-width:2000px;">
+
+  
+            <div class="media mb-headings align-items-center">
+                <div class="media-body">
+                    <!-- <h1 class="h2">My Courses</h1> -->
+                </div>
+                <div class="media-right">
+                    <div class="btn-group btn-group-sm">
+                        <!-- <a href="#" class="btn btn-white active"><i class="material-icons">list</i></a> -->
+                        <!-- <a href="#" class="btn btn-white"><i class="material-icons">dashboard</i></a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="card-columns">
+               
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="">
+                                    <img src="/static/shop/assets/images/game.png" alt="Card image cap" width="100" class="rounded">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="card-title m-0"><a href="#">Introduction to Game Development</a></h4>
+                                <small class="text-muted">Lessons: 5 of 7</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress rounded-0">
+                        <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 56%" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <a href={% url 'shop:coursedetail' %} class="btn btn-primary btn-sm">Continue <i class="material-icons btn__icon--right">play_circle_outline</i></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="/static/shop/assets/images/gulp.png" alt="Card image cap" width="100" class="rounded">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="card-title m-0"><a href="#">Welcome to Eduneer Demo </a></h4>
+                                <small class="text-muted">Lessons: 1 of 1</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress rounded-0">
+                        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="card-footer bg-white ">
+                        <a href={% url 'shop:coursedetail' %} class="btn btn-success btn-sm">Completed <i class="material-icons btn__icon--right">check</i></a>
+                        <a href={% url 'shop:coursedetail' %} class="btn btn-white btn-sm">Restart <i class="material-icons btn__icon--right">replay</i> </a>
+                    </div>
+                </div>
+            </div>
+
+           
+      
+
+
+</div>
+
+
+{% endblock content %}
+
+
+{% block javascript %}
+
+<script>
+    $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function () {
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        for (var i = 0; i < 4; i++) {
+            next = next.next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    });
+
+    $('#popoverData').popover();
+</script>
+
+
+
+<script type="text/javascript">
+    function SwapDivs(da, db) {
+        var d = document.getElementById(da);
+        if (d.style.display == "block") {
+            d.style.display = "none";
+            document.getElementById(db).style.display = "block";
+        } else {
+            d.style.display = "block";
+            document.getElementById(db).style.display = "none";
+        }
+    }
+
+    // $(document).on('click', '')
+</script>
+
+{% endblock %}
