@@ -1,0 +1,191 @@
+{% extends "shop/baseAdmin.html" %}
+{% load static %}
+
+
+{% block title %}
+Earnings
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+{% block content %}
+
+
+<div class="container page__container">
+    
+    <h1 class="h2">Statement</h1>
+    <div class="card">
+        <div class="card-header form-inline">
+            <div class="form-group ml-auto">
+                <label for="flatpickrSample02" class="form-label mr-3">Date</label>
+                <input id="flatpickrSample02" type="text" class="form-control" placeholder="Select dates" data-toggle="flatpickr" data-flatpickr-mode="range" data-flatpickr-alt-input="false" value="2018-10-07 to 2018-10-15">
+            </div>
+        </div>
+
+        <div data-toggle="lists" data-lists-values='[
+"js-lists-values-course", 
+"js-lists-values-document",
+"js-lists-values-amount",
+"js-lists-values-date"
+]' data-lists-sort-by="js-lists-values-date" data-lists-sort-desc="true" class="table-responsive">
+            <table class="table table-nowrap m-0">
+                <thead class="thead-light">
+                    <tr>
+                        <th colspan="2">
+                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-course">Course</a>
+                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-document">Document</a>
+                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-amount">Amount</a>
+                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-date">Date</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="list">
+
+
+
+
+                    <tr>
+                        <td>
+                            <div class="media align-items-center">
+                                <a href="fixed-instructor-course-edit.html" class="avatar avatar-4by3 avatar-sm mr-3">
+                                    <img src="/static/shop/assets/images/vuejs.png" alt="course" class="avatar-img rounded">
+                                </a>
+                                <div class="media-body">
+                                    <a class="text-body js-lists-values-course" href="fixed-instructor-course-edit.html"><strong>Angular Routing In-Depth</strong></a><br>
+                                    <small class="text-muted mr-1">
+                                        Invoice
+                                        <a href="fixed-instructor-invoice.html" style="color: inherit;" class="js-lists-values-document">#8734</a> -
+                                        &dollar;<span class="js-lists-values-amount">89</span> USD
+                                    </small>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-right">
+                            <small class="text-muted text-uppercase js-lists-values-date">12 Nov 2018</small>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="media align-items-center">
+                                <a href="fixed-instructor-course-edit.html" class="avatar avatar-4by3 avatar-sm mr-3">
+                                    <img src="/static/shop/assets/images/vuejs.png" alt="course" class="avatar-img rounded">
+                                </a>
+                                <div class="media-body">
+                                    <a class="text-body js-lists-values-course" href="fixed-instructor-course-edit.html"><strong>Angular Unit Testing</strong></a><br>
+                                    <small class="text-muted mr-1">
+                                        Invoice
+                                        <a href="fixed-instructor-invoice.html" style="color: inherit;" class="js-lists-values-document">#8735</a> -
+                                        &dollar;<span class="js-lists-values-amount">89</span> USD
+                                    </small>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-right">
+                            <small class="text-muted text-uppercase js-lists-values-date">13 Nov 2018</small>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="media align-items-center">
+                                <a href="fixed-instructor-course-edit.html" class="avatar avatar-4by3 avatar-sm mr-3">
+                                    <img src="/static/shop/assets/images/github.png" alt="course" class="avatar-img rounded">
+                                </a>
+                                <div class="media-body">
+                                    <a class="text-body js-lists-values-course" href="fixed-instructor-course-edit.html"><strong>Introduction to TypeScript</strong></a><br>
+                                    <small class="text-muted mr-1">
+                                        Invoice
+                                        <a href="fixed-instructor-invoice.html" style="color: inherit;" class="js-lists-values-document">#8736</a> -
+                                        &dollar;<span class="js-lists-values-amount">89</span> USD
+                                    </small>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-right">
+                            <small class="text-muted text-uppercase js-lists-values-date">14 Nov 2018</small>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="media align-items-center">
+                                <a href="fixed-instructor-course-edit.html" class="avatar avatar-4by3 avatar-sm mr-3">
+                                    <img src="/static/shop/assets/images/gulp.png" alt="course" class="avatar-img rounded">
+                                </a>
+                                <div class="media-body">
+                                    <a class="text-body js-lists-values-course" href="fixed-instructor-course-edit.html"><strong>Learn Angular Fundamentals</strong></a><br>
+                                    <small class="text-muted mr-1">
+                                        Invoice
+                                        <a href="fixed-instructor-invoice.html" style="color: inherit;" class="js-lists-values-document">#8737</a> -
+                                        &dollar;<span class="js-lists-values-amount">89</span> USD
+                                    </small>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-right">
+                            <small class="text-muted text-uppercase js-lists-values-date">15 Nov 2018</small>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    
+</div>
+
+
+
+
+
+{% endblock content %}
+
+
+{% block javascript %}
+
+<script>
+    $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function () {
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        for (var i = 0; i < 4; i++) {
+            next = next.next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    });
+
+    $('#popoverData').popover();
+</script>
+
+
+
+<script type="text/javascript">
+    function SwapDivs(da, db) {
+        var d = document.getElementById(da);
+        if (d.style.display == "block") {
+            d.style.display = "none";
+            document.getElementById(db).style.display = "block";
+        } else {
+            d.style.display = "block";
+            document.getElementById(db).style.display = "none";
+        }
+    }
+</script>
+
+{% endblock %}

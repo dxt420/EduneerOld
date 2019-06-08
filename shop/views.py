@@ -114,7 +114,7 @@ def logout(request):
 def home(request):
     cart = Cart(request)
 
-    if request.user:
+    # if request.user:
         
 
     
@@ -125,9 +125,14 @@ def home(request):
     }
 
     print(request.user)
+    print(request.user.is_staff)
     print(authe.current_user)
     # print(auth.current_user)
-    return render(request,"shop/home.html",context)
+    if request.user.is_staff:
+        return render(request,"shop/admin/dashboard.html",context)
+    else:
+        return render(request,"shop/home.html",context)
+    
 
 def courses(request):
     cart = Cart(request)
@@ -258,6 +263,216 @@ def about(request):
 
     
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def adminCourses(request):
+   
+    context = {
+       
+        "adminCourses_active":"active",
+       
+    }
+    return render(request,"shop/admin/manage-course.html",context)
+
+def adminEarnings(request):
+   
+    context = {
+       
+        "adminEarnings_active":"active",
+       
+    }
+    return render(request,"shop/admin/earnings.html",context)
+
+def adminStatements(request):
+   
+    context = {
+       
+        "adminStatements_active":"active",
+       
+    }
+    return render(request,"shop/admin/statements.html",context)
+
+def adminAbout(request):
+   
+    context = {
+       
+        "adminWebinfo_active":"active",
+       
+    }
+    return render(request,"shop/admin/about.html",context)
+
+def adminPartners(request):
+   
+    context = {
+       
+        "adminWebinfo_active":"active",
+       
+    }
+    return render(request,"shop/admin/partners.html",context)
+
+
+def adminTalks(request):
+   
+    context = {
+       
+        "adminTalks_active":"active",
+       
+    }
+    return render(request,"shop/admin/manage-talks.html",context)
+
+
+def adminNews(request):
+   
+    context = {
+       
+        "adminNews_active":"active",
+       
+    }
+    return render(request,"shop/admin/news.html",context)
+
+def adminCourseNew(request):
+   
+    context = {
+       
+        "adminNeaaaaaaaaaaaaaaaaaws_active":"active",
+       
+    }
+    return render(request,"shop/admin/new-course.html",context)
+
+def adminCourseEdit(request):
+   
+    context = {
+       
+        "adminNaaaaaaaaaaaaaews_active":"active",
+       
+    }
+    return render(request,"shop/admin/edit-course.html",context)
+
+
+def adminTalkNew(request):
+   
+    context = {
+       
+        "adminNeaaaaaaaaaaaws_active":"active",
+       
+    }
+    return render(request,"shop/admin/new-talk.html",context)
+
+def adminTalkEdit(request):
+   
+    context = {
+       
+        "adminNaaaaaaaews_active":"active",
+       
+    }
+    return render(request,"shop/admin/edit-talk.html",context)
 
 
 

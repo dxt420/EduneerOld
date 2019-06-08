@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "shop","cart","ravepay","social_django"
+    "shop","cart","social_django"
 ]
 
 MIDDLEWARE = [
@@ -163,8 +163,3 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = "T23-quh17QGO0JHXhhbE3uAL" #Paste Secret Key
 
 
 
-RAVEPAY_PUBLIC_KEY="FLWPUBK-4e734ea929fdf67fbe0c904c9ff3952e-X"
-RAVEPAY_SECRET_KEY="FLWSECK-64a1d80f6d1a0cefb792e57d855adfb6-X"
-
-
-RAVEPAY_WEBHOOK_HASH="DJANGO_RAVEPAY"

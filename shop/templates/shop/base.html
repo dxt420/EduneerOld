@@ -266,7 +266,7 @@
                             <li class="nav-item {{courses_active}}">
                                 <a class="nav-link" href={% url 'shop:courses' %}>Courses</a>
                             </li>
-                            {% if user %}
+                            {% if request.user.is_authenticated %}
                             <li class="nav-item {{my_courses_active}}">
                                 <a class="nav-link" href={% url 'shop:mycourses' %}>My Courses</a>
                             </li>
@@ -324,14 +324,14 @@
                                         {{ request.user.first_name }} {{ request.user.last_name }}
                                         
                                     </a>
-                                    <a class="dropdown-item" href="">
+                                    <!-- <a class="dropdown-item" href="">
                                         
                                         <i class="material-icons">edit</i> Edit Account
                                     </a>
                                     
                                     <a class="dropdown-item" href="">
                                         <i class="material-icons">person</i> Public Profile
-                                    </a>
+                                    </a> -->
                                     <a class="dropdown-item" href={% url 'shop:logout' %}>
                                         <i class="material-icons">lock</i> Logout
                                     </a>
@@ -360,14 +360,14 @@
                                         {{ request.user.first_name }} {{ request.user.last_name }}
                                         
                                     </a>
-                                    <a class="dropdown-item" href="">
+                                    <!-- <a class="dropdown-item" href="">
                                         
                                         <i class="material-icons">edit</i> Edit Account
                                     </a>
                                     
                                     <a class="dropdown-item" href="">
                                         <i class="material-icons">person</i> Public Profile
-                                    </a>
+                                    </a> -->
                                     <a class="dropdown-item" href={% url 'shop:logout' %}>
                                         <i class="material-icons">lock</i> Logout
                                     </a>
@@ -504,18 +504,38 @@
                     </ul>
                     <!-- Account menu -->
                     <div class="sidebar-heading">Account</div>
+
+                    {% if request.user.is_authenticated %}
+
+
                     <ul class="sidebar-menu">
-                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="#">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">account_box</i> Login
-                            </a>
-                        </li>
-                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="#">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">https</i> Sign up
-                            </a>
-                        </li>
-                    </ul>
+                     
+                        <li class="sidebar-menu-item">
+                           <a class="sidebar-menu-button" href={% url 'shop:logout' %}>
+                               <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">https</i> Logout
+                           </a>
+                       </li>
+                   </ul>
+                        {% else %}
+
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-menu-item">
+                               <a class="sidebar-menu-button" href={% url 'shop:login' %}>
+                                   <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">account_box</i> Login
+                               </a>
+                           </li>
+                            <li class="sidebar-menu-item">
+                               <a class="sidebar-menu-button" href={% url 'shop:register' %}>
+                                   <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">https</i> Sign up
+                               </a>
+                           </li>
+                       </ul>
+                        {% endif %}
+                   
+
+
+
+
                     <div class="sidebar-heading"></div>
                     <ul class="sidebar-menu sm-active-button-bg">
                         <li class="sidebar-menu-item {{cart_active}}">

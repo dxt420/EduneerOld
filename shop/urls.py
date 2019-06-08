@@ -26,6 +26,21 @@ urlpatterns = [
     path('login', views.login , name="login"),
     path('logout', views.logout , name="logout"),
     path('forgot', views.forgot , name="forgot"),
+
+
+
+    path('manage-courses', views.adminCourses , name="adminCourses"),
+    path('earnings', views.adminEarnings , name="adminEarnings"),
+    path('statements', views.adminStatements , name="adminStatements"),
+    path('manage-about', views.adminAbout , name="adminAbout"),
+    path('manage-partners', views.adminPartners , name="adminPartners"),
+    path('manage-talks', views.adminTalks , name="adminTalks"),
+    path('manage-news', views.adminNews , name="adminNews"),
+
+    path('edit-talk', views.adminTalkEdit , name="adminTalkEdit"),
+    path('new-course', views.adminCourseNew , name="adminCourseNew"),
+    path('edit-course', views.adminCourseEdit , name="adminCourseEdit"),
+    path('new-talk', views.adminTalkNew , name="adminTalkNew"),
     
     
 ]
